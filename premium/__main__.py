@@ -21,7 +21,7 @@ if (
     and all(trigger not in os.environ for trigger in {"OKTETO", "DOCKER", "GOORM"})
 ):
     print("🚫" * 15)
-    print("You attempted to run Shaxsiy on behalf of root user")
+    print("You attempted to run Premium on behalf of root user")
     print("Please, create a new user and restart script")
     print("If this action was intentional, pass --root argument instead")
     print("🚫" * 15)
@@ -55,7 +55,7 @@ def deps(error):
 
 if sys.version_info < (3, 8, 0):
     print("🚫 Error: you must use at least Python version 3.8.0")
-elif __package__ != "hikka":  # In case they did python __main__.py
+elif __package__ != "premium":  # In case they did python __main__.py
     print("🚫 Error: you cannot run this as a script; you must execute as a package")
 else:
     try:
@@ -75,7 +75,7 @@ else:
             if tuple(map(int, telethon.__version__.split("."))) < (1, 24, 10):
                 raise ImportError
         except ImportError:
-            print("🔄 Qayta o'rnatilmoqda Shaxsiy-TL...")
+            print("🔄 Qayta o'rnatilmoqda Premium-TL...")
             subprocess.run(
                 [
                     sys.executable,
@@ -118,7 +118,7 @@ else:
         deps(e)
 
     if __name__ == "__main__":
-        if "SHAXSIY_DO_NOT_RESTART" in os.environ:
-            del os.environ["SHAXSIY_DO_NOT_RESTART"]
+        if "PREMIUM_DO_NOT_RESTART" in os.environ:
+            del os.environ["PREMIUM_DO_NOT_RESTART"]
 
         main.hikka.main()  # Execute main function
