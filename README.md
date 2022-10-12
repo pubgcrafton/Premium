@@ -13,7 +13,7 @@
 <b>⚠️Okteto endi userbotlarni taqiqlaydi, shuning uchun u yerda Shaxsiy userbotni o'rnatish tavsiya etilmaydi! </b>
 
 <b>Qo'lda o'rnatish:</b>
-<code>apt update && apt upgrade && pkg install python && pkg install git -y && git clone https://github.com/pubgcrafton/Premium && cd shaxsiy && pip install -r requirements.txt && python3 -m premium</code>
+<code>apt update && apt upgrade && pkg install python && pkg install git -y && git clone https://github.com/pubgcrafton/Premium && cd Premium && pip install -r requirements.txt && python3 -m premium</code>
 
 
 <hr>
