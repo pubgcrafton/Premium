@@ -99,7 +99,7 @@ else:
                     "-q",
                     "--disable-pip-version-check",
                     "--no-warn-script-location",
-                    "premium-tl",
+                    "hikka-tl",
                 ],
                 check=True,
             )
