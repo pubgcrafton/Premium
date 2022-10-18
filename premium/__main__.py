@@ -121,4 +121,4 @@ else:
         if "PREMIUM_DO_NOT_RESTART" in os.environ:
             del os.environ["PREMIUM_DO_NOT_RESTART"]
 
-        main.hikka.main()  # Execute main function
+        main.premium.main()  # Execute main function
