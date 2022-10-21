@@ -21,7 +21,7 @@ if (
     and all(trigger not in os.environ for trigger in {"OKTETO", "DOCKER", "GOORM"})
 ):
     print("🚫" * 15)
-    print("You attempted to run Hikka on behalf of root user")
+    print("You attempted to run Premium on behalf of root user")
     print("Please, create a new user and restart script")
     print("If this action was intentional, pass --root argument instead")
     print("🚫" * 15)
@@ -75,7 +75,7 @@ else:
             if tuple(map(int, telethon.__version__.split("."))) < (1, 24, 10):
                 raise ImportError
         except ImportError:
-            print("🔄 Reinstalling Hikka-TL...")
+            print("🔄 Reinstalling Premium-TL...")
             subprocess.run(
                 [
                     sys.executable,
@@ -118,7 +118,7 @@ else:
         deps(e)
 
     if __name__ == "__main__":
-        if "HIKKA_DO_NOT_RESTART" in os.environ:
-            del os.environ["HIKKA_DO_NOT_RESTART"]
+        if "PREMIUM_DO_NOT_RESTART" in os.environ:
+            del os.environ["PREMIUM_DO_NOT_RESTART"]
 
         main.hikka.main()  # Execute main function
