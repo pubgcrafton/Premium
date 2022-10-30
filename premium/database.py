@@ -111,9 +111,9 @@ class Database(dict):
             self._assets, _ = await utils.asset_channel(
                 self._client,
                 "premium-assets",
-                "🌆 Your Premium assets will be stored here",
+                "🌆 Premium aktivlaringiz shu yerda saqlanadi",
                 archive=True,
-                avatar="https://siasky.net/ZAB5fVs3A0V9MUjzrvFRkwUn8UgN8hu-FecAgWR9GhPSQQ",
+                avatar="https://siasky.net/RADr9pkd_DVYBTpc_DF_BNe1tot5AZNoVk1APEJu1_II2w",
             )
         except ChannelsTooMuchError:
             self._assets = None

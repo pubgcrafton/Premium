@@ -215,6 +215,12 @@ def parse_arguments() -> dict:
         action="store_true",
         help="Disable `force_insecure` warning",
     )
+    parser.add_argument(
+        "--proxy-pass",
+        dest="proxy_pass",
+        action="store_true",
+        help="Open proxy pass tunnel on start (not needed on setup)",
+    )
     arguments = parser.parse_args()
     logging.debug(arguments)
     if sys.platform == "win32":
@@ -410,8 +416,8 @@ class Premium:
 
     async def _web_banner(self):
         """Shows web banner"""
-        logging.info("✅ Web mode ready for configuration")
-        logging.info("🌐 Please visit %s", self.web.url)
+        logging.info("✅ Veb rejimi sozlashga tayyor")
+        logging.info("🌐 Marhamat tashrif buyuring %s", self.web.url)
 
     async def wait_for_web_auth(self, token: str) -> bool:
         """
@@ -553,30 +559,30 @@ class Premium:
 
             logo1 = f"""
 
-                        🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
-🔺⬛⬛⬛🔺🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛⬛⬛🔺⬛🔺🔺🔺⬛🔺🔺⬛⬛🔺🔺⬛⬛⬛🔺🔺🔺
-🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛⬛🔺🔺⬛🔺🔺⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺🔺
-🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛🔺⬛🔺⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛🔺🔺⬛🔺🔺⬛🔺⬛⬛⬛🔺🔺🔺
-🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺🔺⬛🔺🔺🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺🔺
-🔺⬛⬛⬛🔺🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛⬛⬛🔺🔺🔺⬛🔺🔺🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺⬛🔺
-🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+ 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+ ⬛⬛⬛🔺🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛⬛⬛🔺⬛🔺🔺🔺⬛🔺🔺⬛⬛🔺🔺⬛⬛⬛🔺🔺
+ ⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛⬛🔺🔺⬛🔺🔺⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺
+ ⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛🔺⬛🔺⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛🔺🔺⬛🔺🔺⬛🔺⬛⬛⬛🔺🔺
+ ⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺🔺⬛🔺🔺🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺
+ ⬛⬛⬛🔺🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛⬛⬛🔺🔺🔺⬛🔺🔺🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺⬛
+ 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
                         
 
-                     • Build: {build[:7]}
-                     • Version: {'.'.join(list(map(str, list(__version__))))}
+                     • Qurilishi: {build[:7]}
+                     • Versiya: {'.'.join(list(map(str, list(__version__))))}
                      • {upd}
-                     • Platform: {_platform}
+                     • Platforma: {_platform}
                      """
 
             if not self.omit_log:
                 print(logo1)
                 web_url = (
-                    f"🌐 Web url: {self.web.url}\n"
+                    f"🌐 Veb manzil: {self.web.url}\n"
                     if self.web and hasattr(self.web, "url")
                     else ""
                 )
                 logging.info(
-                    "🌘 Premium %s started\n🔏 GitHub commit SHA: %s (%s)\n%s%s",
+                    "💢 Premium %s started\n🔏 GitHub commit SHA: %s (%s)\n%s%s",
                     ".".join(list(map(str, list(__version__)))),
                     build[:7],
                     upd,
@@ -620,6 +626,11 @@ class Premium:
             events.MessageEdited(),
         )
 
+        client.add_event_handler(
+            dispatcher.handle_raw,
+            events.Raw(),
+        )
+
     async def amain(self, first: bool, client: CustomTelegramClient):
         """Entrypoint for async init, run once for each user"""
         client.parse_mode = "HTML"
@@ -642,6 +653,7 @@ class Premium:
             await self.web.start_if_ready(
                 len(self.clients),
                 self.arguments.port,
+                proxy_pass=self.arguments.proxy_pass,
             )
 
         await self._add_dispatcher(client, modules, db)

@@ -119,7 +119,7 @@ class PremiumException:
 
         return PremiumException(
             message=(
-                f"<b>🚫 Error!</b>\n{cause_mod}\n<b>🗄 Where:</b>"
+                f"<b>🚫 Xato!</b>\n{cause_mod}\n<b>🗄 Where:</b>"
                 f" <code>{utils.escape_html(filename)}:{lineno}</code><b>"
                 f" in </b><code>{utils.escape_html(name)}</code>\n😵"
                 f" <code>{utils.escape_html(line)}</code>"
@@ -195,10 +195,10 @@ class TelegramLogsHandler(logging.Handler):
     ):
         chunks = (
             item.message
-            + "\n\n<b>🦝 Locals:</b>\n"
+            + "\n\n<b>🦝 Mahalliy to'plam:</b>\n"
             + item.local_vars
             + "\n\n"
-            + "<b>🪐 Full stack:</b>\n"
+            + "<b>🪐 To'liq to'plam:</b>\n"
             + item.full_stack
         )
 
@@ -238,7 +238,7 @@ class TelegramLogsHandler(logging.Handler):
                     item[0].message,
                     reply_markup=self._mods[client_id].inline.generate_markup(
                         {
-                            "text": "🪐 Full stack",
+                            "text": "🪐 To'liq to'plam",
                             "callback": self._show_full_stack,
                             "args": (
                                 self._mods[client_id].inline.bot,
@@ -273,7 +273,7 @@ class TelegramLogsHandler(logging.Handler):
                     self._mods[client_id]._logchat,
                     logfile,
                     caption=(
-                        "<b>🧳 Journals are too big to be sent as separate messages</b>"
+                        "<b>🧳 Jurnallar alohida xabarlar sifatida yuborilishi uchun juda katta</b>"
                     ),
                 )
 

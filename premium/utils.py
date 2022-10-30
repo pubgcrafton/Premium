@@ -25,6 +25,7 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 import asyncio
+import contextlib
 import functools
 import io
 import json
@@ -47,7 +48,12 @@ import telethon
 from telethon import hints
 from telethon.tl.custom.message import Message
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from telethon.tl.functions.channels import CreateChannelRequest, EditPhotoRequest
+from telethon.tl.functions.channels import (
+    CreateChannelRequest,
+    EditPhotoRequest,
+    EditAdminRequest,
+    InviteToChannelRequest,
+)
 from telethon.tl.functions.messages import (
     GetDialogFiltersRequest,
     UpdateDialogFilterRequest,
@@ -82,6 +88,7 @@ from telethon.tl.types import (
     User,
     Chat,
     UpdateNewChannelMessage,
+    ChatAdminRights,
 )
 
 from aiogram.types import Message as AiogramMessage
@@ -478,9 +485,8 @@ async def answer(
                 result = await message.client.send_file(
                     message.peer_id,
                     file,
-                    caption=(
-                        "<b>📤 Command output seems to be too long, so it's sent in"
-                        " file.</b>"
+                    caption=message.client.loader._lookup("translations").strings(
+                        "too_long"
                     ),
                 )
 
@@ -633,6 +639,36 @@ async def set_avatar(
     return True
 
 
+async def invite_inline_bot(
+    client: CustomTelegramClient,
+    peer: hints.EntityLike,
+) -> None:
+    """
+    Invites inline bot to a chat
+    :param client: Client to use
+    :param peer: Peer to invite bot to
+    :return: None
+    :raise RuntimeError: If error occurred while inviting bot
+    """
+
+    try:
+        await client(InviteToChannelRequest(peer, [client.loader.inline.bot_username]))
+    except Exception as e:
+        raise RuntimeError(
+            "Can't invite inline bot to old asset chat, which is required by module"
+        ) from e
+
+    with contextlib.suppress(Exception):
+        await client(
+            EditAdminRequest(
+                channel=peer,
+                user_id=client.loader.inline.bot_username,
+                admin_rights=ChatAdminRights(ban_users=True),
+                rank="Premium",
+            )
+        )
+
+
 async def asset_channel(
     client: CustomTelegramClient,
     title: str,
@@ -641,6 +677,7 @@ async def asset_channel(
     channel: bool = False,
     silent: bool = False,
     archive: bool = False,
+    invite_bot: bool = False,
     avatar: typing.Optional[str] = None,
     ttl: typing.Optional[int] = None,
     _folder: typing.Optional[str] = None,
@@ -653,6 +690,7 @@ async def asset_channel(
     :param channel: Whether to create a channel or supergroup
     :param silent: Automatically mute channel
     :param archive: Automatically archive channel
+    :param invite_bot: Add inline bot and assure it's in chat
     :param avatar: Url to an avatar to set as pfp of created peer
     :param ttl: Time to live for messages in channel
     :return: Peer and bool: is channel new or pre-existent
@@ -669,6 +707,15 @@ async def asset_channel(
     async for d in client.iter_dialogs():
         if d.title == title:
             client._channels_cache[title] = {"peer": d.entity, "exp": int(time.time())}
+            if invite_bot:
+                if all(
+                    participant.id != client.loader.inline.bot_id
+                    for participant in (
+                        await client.get_participants(d.entity, limit=100)
+                    )
+                ):
+                    await invite_inline_bot(client, d.entity)
+
             return d.entity, False
 
     peer = (
@@ -680,6 +727,9 @@ async def asset_channel(
             )
         )
     ).chats[0]
+
+    if invite_bot:
+        await invite_inline_bot(client, peer)
 
     if silent:
         await dnd(client, peer, archive)
@@ -825,16 +875,27 @@ def get_named_platform() -> str:
     return f"✌️ lavHost {os.environ['LAVHOST']}" if "LAVHOST" in os.environ else "📻 VDS"
 
 
-def get_platform_emoji() -> str:
+def get_platform_emoji(client: typing.Optional[CustomTelegramClient] = None) -> str:
     """
     Returns custom emoji for current platform
+    :client: It is recommended to pass the client in here in order
+        to provide correct emojis for rtl languages. Make sure, that other strings
+        you use, are adapted to rtl languages as well. Otherwise, the string
+        will be broken.
     :return: Emoji entity in string
     """
     BASE = (
-        "<emoji document_id={}>🌘</emoji><emoji"
-        " document_id=5195311729663286630>🌘</emoji><emoji"
-        " document_id=5195045669324201904>🌘</emoji>"
+        "<emoji document_id={}>🔆</emoji>",
+        "<emoji document_id=5195311729663286630>🔆</emoji>",
+        "<emoji document_id=5195045669324201904>🔆</emoji>",
     )
+
+    if client and (
+        client.loader._db.get("premium.translations", "lang", False) or ""
+    ).startswith("ar"):
+        BASE = tuple(reversed(BASE))
+
+    BASE = "".join(BASE)
 
     if "GOORM" in os.environ:
         return BASE.format(5298947740032573902)
@@ -1341,6 +1402,15 @@ def validate_html(html: str) -> str:
     """
     text, entities = telethon.extensions.html.parse(html)
     return telethon.extensions.html.unparse(escape_html(text), entities)
+
+
+def iter_attrs(obj: typing.Any, /) -> typing.Iterator[typing.Tuple[str, typing.Any]]:
+    """
+    Iterates over attributes of object
+    :param obj: Object to iterate over
+    :return: Iterator of attributes and their values
+    """
+    return ((attr, getattr(obj, attr)) for attr in dir(obj))
 
 
 init_ts = time.perf_counter()
