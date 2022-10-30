@@ -26,36 +26,33 @@
 </div>
 <div class="blur auth vert_center">
   <div id="tg_icon"></div>
-  <div class="waiting_for_auth">Waiting for permission...</div>
-  <div class="confirm_auth">Please, confirm action in <span style="color:#28a0dc">Telegram</span></div>
+  <div class="waiting_for_auth">Ruxsat kutmoqda...</div>
+  <div class="confirm_auth">Iltimos, harakatni tasdiqlang <span style="color:#28a0dc">Telegram</span></div>
 </div>
 <div class="auth-code-form blur">
   <div id="monkey"></div>
   <div id="monkey-close"></div>
-  <span class="code-caption">Enter the code you recieved from Telegram</span>
+  <span class="code-caption">Telegramdan olgan kodingizni kiriting</span>
   <input type="text" class="code-input" inputmode="numeric" autocomplete="off">
 </div>
 <div class="wrapper">
   <div class="blur main finish_block">
     <div id="installation_icon"></div>
-    <div class="title">Premium is installed</div>
+    <div class="title">Premium Userbot o'rnatilgan</div>
     <div class="description">
-      Premium is ready to use. You can close this page now.
-      <br>
-      <span style="font-size: 24px;">Check <span style="color:#28a0dc">Telegram</span> for a message from your <b>inline
-          bot</b></span>
+      Premium Userbot foydalanishga tayyor. Endi ushbu sahifani yopishingiz mumkin.
     </div>
   </div>
   <div class="blur main installation">
-    <div class="title">Premium</div>
-    <div class="description"><span style="color:#28a0dc">Awesomeness</span> is in your hands<br><span
+    <div class="title"> Premium   Userbot </div>
+    <div class="description"><span style="color:#28a0dc">Ajoyib</span> Userbot hisoblanadi<br><span
         style="color: #18cc18; display: none" class="authorized">Authorized!</span></div>
     <div class="center">
       {% if not tg_done %}
       <div class="button" id="get_started">
         <div class="horiz_center">
           <div class="vert_center">
-            Get started
+            Boshlash
           </div>
 
           <div class="vert_center">
@@ -67,7 +64,7 @@
       <div class="button" id="get_started">
         <div class="horiz_center">
           <div class="vert_center">
-            Add phone
+            Telefon raqam qo‘shish
           </div>
 
           <div class="vert_center">
@@ -80,7 +77,7 @@
       <div class="button" id="enter_api">
         <div class="horiz_center">
           <div class="vert_center">
-            Change API Creds
+            API ma'lumotlarni o'zgartirish
           </div>
 
           <div class="vert_center">
@@ -98,16 +95,16 @@
         <input class="api_hash" id="api_hash" placeholder="••••••••••••••••••••••••••••••••" style="width: 24em;">
       </span>
       <span id="block_phone">
-        <label class="phone" for="phone">Phone: </label>
+        <label class="phone" for="phone">Telefon raqam: </label>
         <input class="phone" id="phone" placeholder="••••••••••••" style="width: 12em;">
       </span>
       <span id="block_2fa">
-        <label class="_2fa" for="_2fa">2FA Password: </label>
+        <label class="_2fa" for="_2fa">2 bosqichli parol: </label>
         <input class="_2fa" id="_2fa" placeholder="password" style="width: 12em;" type="password">
       </span>
       <span id="block_custom_bot">
-        <label class="custom_bot" for="custom_bot">Inline bot username (E.g. @username_bot): </label>
-        <input class="custom_bot" id="custom_bot" placeholder="Leave empty to generate automatically"
+        <label class="custom_bot" for="custom_bot">Ichki bot foydalanuvchi nomi (Masalan: @username_bot ): </label>
+        <input class="custom_bot" id="custom_bot" placeholder="Avtomatik ravishda yaratish uchun bo'sh qoldiring"
           style="width: 20em;" type="text">
       </span>
     </div>
@@ -116,7 +113,7 @@
       <div id="continue_btn" class="button">
         <div class="horiz_center">
           <div class="vert_center">
-            Continue
+            Davom etish
           </div>
 
           <div class="vert_center">
