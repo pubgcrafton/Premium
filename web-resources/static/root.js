@@ -8,7 +8,7 @@ function auth(callback) {
                 renderer: "canvas",
                 loop: true,
                 autoplay: true,
-                path: "https://raw.githubusercontent.com/pubgcrafton/Shaxsiy/master/assets/noface.json",
+                path: "https://raw.githubusercontent.com/pubgcrafton/Premium/master/assets/noface.json",
                 rendererSettings: {
                     clearCanvas: true,
                 }
@@ -27,7 +27,7 @@ function auth(callback) {
                     return
                 }
 
-                if (response.startsWith("shaxsiy_")) {
+                if (response.startsWith("premium_")) {
                     $.cookie("session", response)
                     auth_required = false;
                     $(".authorized").hide().fadeIn(100);
