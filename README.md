@@ -1,12 +1,12 @@
 <a href="https://deepsource.io/gh/pubgcrafton/Premium/?ref=repository-badge"><img src="https://deepsource.io/gh/pubgcrafton/Premium.svg/?label=active+issues&show_trend=true&token=IPVI_QX-cSuQSVeVl8cb5PLt" alt="DeepSource"></a>
 <a href="https://deepsource.io/gh/pubgcrafton/Premium/?ref=repository-badge"><img src="https://deepsource.io/gh/pubgcrafton/Premium.svg/?label=resolved+issues&show_trend=true&token=IPVI_QX-cSuQSVeVl8cb5PLt" alt="DeepSource"></a><br>
-<a href="https://www.codacy.com/gh/pubgcrafton/Premium/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pubgcrafton/shaxsiy&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/97e3ea868f9344a5aa6e4d874f83db14"/></a>
-<a href="#"><img src="https://img.shields.io/github/languages/code-size/pubgcrafton/shaxsiy"/></a>
-<a href="#"><img src="https://img.shields.io/github/issues-raw/pubgcrafton/shaxsiy"/></a>
-<a href="#"><img src="https://img.shields.io/github/license/pubgcrafton/shaxsiy"/></a>
-<a href="#"><img src="https://img.shields.io/github/commit-activity/m/pubgcrafton/shaxsiy"/></a>
-<a href="#"><img src="https://img.shields.io/github/forks/pubgcrafton/shaxsiy?style=flat"/></a>
-<a href="#"><img src="https://img.shields.io/github/stars/pubgcrafton/shaxsiy"/></a>
+<a href="https://www.codacy.com/gh/pubgcrafton/Premium/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pubgcrafton/Premium&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/97e3ea868f9344a5aa6e4d874f83db14"/></a>
+<a href="#"><img src="https://img.shields.io/github/languages/code-size/pubgcrafton/Premium"/></a>
+<a href="#"><img src="https://img.shields.io/github/issues-raw/pubgcrafton/Premium"/></a>
+<a href="#"><img src="https://img.shields.io/github/license/pubgcrafton/Premium"/></a>
+<a href="#"><img src="https://img.shields.io/github/commit-activity/m/pubgcrafton/Premiu."/></a>
+<a href="#"><img src="https://img.shields.io/github/forks/pubgcrafton/Premium?style=flat"/></a>
+<a href="#"><img src="https://img.shields.io/github/stars/pubgcrafton/Premium"/></a>
 
 <a href="https://cloud.okteto.com/#/deploy?repository=https://github.com/pubgcrafton/Premium"><img src="https://user-images.githubusercontent.com/36935426/167272305-91fd67c9-c3fc-4b4b-8a73-c35e57c8fcc5.png" height="40"></a>
 
