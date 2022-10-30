@@ -8,7 +8,7 @@ function auth(callback) {
                 renderer: "canvas",
                 loop: true,
                 autoplay: true,
-                path: "https://github.com/pubgcrafton/Premium/master/assets/noface.json",
+                path: "https://raw.githubusercontent.com/pubgcrafton/Shaxsiy/master/assets/noface.json",
                 rendererSettings: {
                     clearCanvas: true,
                 }
@@ -22,12 +22,12 @@ function auth(callback) {
             .then(response => response.text())
             .then((response) => {
                 if (response == "TIMEOUT") {
-                    error_message("Code waiting timeout exceeded. Reload page and try again.");
+                    error_message("Kodni kutish vaqti oshdi. Sahifani qayta yuklang va yana urinib ko'ring.");
                     $(".auth").fadeOut(500);
                     return
                 }
 
-                if (response.startsWith("premium_")) {
+                if (response.startsWith("shaxsiy_")) {
                     $.cookie("session", response)
                     auth_required = false;
                     $(".authorized").hide().fadeIn(100);
@@ -103,7 +103,7 @@ function finish_login() {
         })
         .catch((err) => {
             error_state();
-            error_message("Login confirmation error: " + err.toString());
+            error_message("Kirishda tasdiqlash xatosi: " + err.toString());
         });
 }
 
@@ -134,7 +134,7 @@ function tg_code() {
                         })
                     });
                     $(".code-input").removeAttr("disabled");
-                    $(".code-caption").html("Enter your Telegram 2FA password, then press <span style='color: #dc137b;'>Enter</span>");
+                    $(".code-caption").html("Telegram 2 bosqichli parolingizni kiriting, so'ng <span style='color: #dc137b;'>Tasdiqlash</span>ni bosing");
                     cnt_btn.setAttribute("current-step", "2fa");
                     $("#monkey").hide();
                     $("#monkey-close").hide().fadeIn(100);
@@ -157,7 +157,7 @@ function tg_code() {
         })
         .catch(error => {
             Swal.showValidationMessage(
-                `Auth failed: ${error.toString()}`
+                `Auth amalga oshmadi: ${error.toString()}`
             )
         })
 }
@@ -244,7 +244,7 @@ function process_next() {
             })
             .catch((err) => {
                 error_state();
-                error_message("Error occured while saving credentials: " + err.toString());
+                error_message("Hisob maʼlumotlarini saqlashda xatolik yuz berdi: " + err.toString());
             });
 
         return;
@@ -289,14 +289,14 @@ function process_next() {
                         })
                     });
                     $(".code-input").removeAttr("disabled");
-                    $(".code-caption").text("Enter the code you recieved in Telegram");
+                    $(".code-caption").text("Telegramda olgan kodingizni kiriting");
                     cnt_btn.setAttribute("current-step", "code");
                     _current_block = "code";
                 }
             })
             .catch((err) => {
                 error_state();
-                error_message("Code send failed: " + err.toString());
+                error_message("Kod yuborilmadi: " + err.toString());
             });
     }
 
@@ -312,8 +312,8 @@ function process_next() {
         if (custom_bot != "" && (!custom_bot.toLowerCase().endsWith("bot") || custom_bot.length < 5)) {
             Swal.fire({
                 "icon": "error",
-                "title": "Bot username invalid",
-                "text": "It must end with `bot` and be at least 5 symbols in length"
+                "title": "Bot foydalanuvchi nomi yaroqsiz",
+                "text": "U bot bilan tugashi va uzunligi kamida 5 ta belgidan iborat bo'lishi kerak"
             })
             return
         }
@@ -333,7 +333,7 @@ function process_next() {
                 if (response == "OCCUPIED") {
                     Swal.fire({
                         "icon": "error",
-                        "title": "This bot username is already occupied!"
+                        "title": "Ushbu bot foydalanuvchi nomi allaqachon mavjud!"
                     })
                     return;
                 }
@@ -342,7 +342,7 @@ function process_next() {
             })
             .catch((err) => {
                 error_state();
-                error_message("Custom bot setting error: " + err.toString());
+                error_message("Maxsus botni sozlash xatosi: " + err.toString());
             });
 
         return
