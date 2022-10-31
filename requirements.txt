@@ -1,4 +1,5 @@
-Telethon-Mod==1.24.7
+hikka-tl==1.24.10
+aiofile==3.8.1
 pythondialog==3.5.3
 gitpython==3.1.27
 meval==2.5
@@ -8,7 +9,6 @@ Jinja2==3.0.3
 requests==2.27.1
 aiogram==2.19
 grapheme==0.6.0
-heroku3==5.1.4
+emoji==2.1.0
 
 # Python 3.8+
-
