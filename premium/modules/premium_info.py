@@ -452,11 +452,11 @@ class PremiumInfoMod(loader.Module):
         # Legacy migration
         if (
             self.config["banner_url"]
-            == "https://github.com/pubgcrafton/assets/raw/master/premium_banner.png"
+            == "https://raw.githubusercontent.com/pubgcrafton/assets/master/premium_banner.png"
         ):
             self.config[
                 "banner_url"
-            ] = "https://siasky.net/OACK8QFH9RqCtoPME21t5u5uSrEUzGRZl8YRJu1Tb_CZtA"
+            ] = "https://0x0.st/oYyw.jpg"
 
     def _render_info(self, inline: bool) -> str:
         try:
@@ -546,7 +546,7 @@ class PremiumInfoMod(loader.Module):
                 else {"message": self._render_info(True)}
             ),
             "thumb": (
-                "https://github.com/pubgcrafton/Premium/raw/master/assets/premium_pfp.png"
+                "https://raw.githubusercontent.com/pubgcrafton/Premium/main/assets/premium_pfp.png"
             ),
             "reply_markup": self._get_mark(),
         }
