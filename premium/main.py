@@ -410,8 +410,8 @@ class Premium:
 
     async def _web_banner(self):
         """Shows web banner"""
-        logging.info("✅ Web mode ready for configuration")
-        logging.info("🌐 Please visit %s", self.web.url)
+        logging.info("✅ Veb rejimi sozlashga tayyor")
+        logging.info("🌐 Marhamat tashrif buyuring %s", self.web.url)
 
     async def wait_for_web_auth(self, token: str) -> bool:
         """
@@ -553,7 +553,7 @@ class Premium:
 
             logo1 = f"""
 
-                        🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
 🔺⬛⬛⬛🔺🔺🔺⬛⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛⬛⬛🔺⬛🔺🔺🔺⬛🔺🔺⬛⬛🔺🔺⬛⬛⬛🔺🔺🔺
 🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛⬛🔺🔺⬛🔺🔺⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺🔺
 🔺⬛🔺🔺⬛🔺⬛🔺🔺⬛🔺⬛🔺⬛🔺⬛🔺🔺⬛🔺🔺🔺⬛🔺⬛🔺🔺⬛🔺🔺⬛🔺⬛⬛⬛🔺🔺🔺
@@ -562,21 +562,21 @@ class Premium:
 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
                         
 
-                     • Build: {build[:7]}
-                     • Version: {'.'.join(list(map(str, list(__version__))))}
+                     • Qurilishi: {build[:7]}
+                     • Versiya: {'.'.join(list(map(str, list(__version__))))}
                      • {upd}
-                     • Platform: {_platform}
+                     • Platforma: {_platform}
                      """
 
             if not self.omit_log:
                 print(logo1)
                 web_url = (
-                    f"🌐 Web url: {self.web.url}\n"
+                    f"🌐 Veb manzil: {self.web.url}\n"
                     if self.web and hasattr(self.web, "url")
                     else ""
                 )
                 logging.info(
-                    "🌘 Premium %s started\n🔏 GitHub commit SHA: %s (%s)\n%s%s",
+                    "💢 Premium %s started\n🔏 GitHub commit SHA: %s (%s)\n%s%s",
                     ".".join(list(map(str, list(__version__)))),
                     build[:7],
                     upd,
