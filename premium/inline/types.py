@@ -218,7 +218,7 @@ class InlineQuery(AiogramInlineQuery):
                 title=title,
                 description=description,
                 input_message_content=InputTextMessageContent(
-                    "😶‍🌫️ <i>There is nothing here...</i>",
+                    "😶‍🌫️ <i>Bu yerda hech narsa yo‘q...</i>",
                     parse_mode="HTML",
                 ),
                 thumb_url=thumb_url,
