@@ -440,7 +440,7 @@ class PremiumInfoMod(loader.Module):
             ),
             loader.ConfigValue(
                 "banner_url",
-                "https://siasky.net/bAAgRcZ8SDe_5H1RkcH9eUX0xEHMAKYaMZSAkesytiE21Q",
+                "https://0x0.st/oYyw.jpg",
                 lambda: self.strings("_cfg_banner"),
                 validator=loader.validators.Link(),
             ),
