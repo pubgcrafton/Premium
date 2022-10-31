@@ -32,7 +32,7 @@ if (
 
 
 def deps(error):
-    print(f"{str(error)}\n🔄 Attempting dependencies installation... Just wait ⏱")
+    print(f"{str(error)}\n🔄 Bog'liqlarni o'rnatishga urinish... Shunchaki kuting ⏱")
 
     subprocess.run(
         [
@@ -75,7 +75,7 @@ else:
             if tuple(map(int, telethon.__version__.split("."))) < (1, 24, 10):
                 raise ImportError
         except ImportError:
-            print("🔄 Reinstalling Premium-TL...")
+            print("🔄 Qayta o'rnatilmoqda Premium-TL...")
             subprocess.run(
                 [
                     sys.executable,
