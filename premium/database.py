@@ -113,7 +113,7 @@ class Database(dict):
                 "premium-assets",
                 "🌆 Premium aktivlaringiz shu yerda saqlanadi",
                 archive=True,
-                avatar="https://siasky.net/RADr9pkd_DVYBTpc_DF_BNe1tot5AZNoVk1APEJu1_II2w",
+                avatar="https://raw.githubusercontent.com/pubgcrafton/assets/master/shaxsiy-assets.png",
             )
         except ChannelsTooMuchError:
             self._assets = None
