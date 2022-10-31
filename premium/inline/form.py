@@ -362,8 +362,8 @@ class Form(InlineUnit):
                 # Remove `Traceback (most recent call last):`
                 exc = "\n".join(exc.splitlines()[1:])
                 msg = (
-                    "<b>🚫 Form invoke failed!</b>\n\n"
-                    f"<b>🧾 Logs:</b>\n<code>{utils.escape_html(exc)}</code>"
+                    "<b>🚫 Shaklni chaqirish amalga oshmadi!</b>\n\n"
+                    f"<b>🧾 Jurnallar:</b>\n<code>{utils.escape_html(exc)}</code>"
                 )
 
             del self._units[unit_id]
@@ -420,10 +420,10 @@ class Form(InlineUnit):
                                     .format(random.choice(VERIFICATION_EMOJIES))
                                 ),
                                 input_message_content=InputTextMessageContent(
-                                    "🔄 <b>Transferring value to userbot...</b>\n"
-                                    "<i>This message will be deleted automatically</i>"
+                                    "🔄 <b>Qiymat userbotga o'tkazilmoqda...</b>\n"
+                                    "<i>Ushbu xabar avtomatik ravishda o'chiriladi</i>"
                                     if inline_query.from_user.id == self._me
-                                    else "🔄 <b>Transferring value to userbot...</b>",
+                                    else "🔄 <b>Qiymat userbotga o'tkazilmoqda...</b>",
                                     "HTML",
                                     disable_web_page_preview=True,
                                 ),
