@@ -231,7 +231,7 @@ class List(InlineUnit):
                 # Remove `Traceback (most recent call last):`
                 exc = "\n".join(exc.splitlines()[1:])
                 msg = (
-                    "<b>🚫 List invoke failed!</b>\n\n"
+                    "<b>🚫 Ro‘yxatni chaqirish amalga oshmadi!</b>\n\n"
                     f"<b>🧾 Logs:</b>\n<code>{utils.escape_html(exc)}</code>"
                 )
 
