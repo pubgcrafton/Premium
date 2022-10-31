@@ -306,7 +306,7 @@ class Gallery(InlineUnit):
                     # Remove `Traceback (most recent call last):`
                     exc = "\n".join(exc.splitlines()[1:])
                     msg = (
-                        "<b>🚫 Gallery invoke failed!</b>\n\n"
+                        "<b>🚫 Galereyani ochish amalga oshmadi!</b>\n\n"
                         f"<b>🧾 Logs:</b>\n<code>{utils.escape_html(exc)}</code>"
                     )
 
@@ -422,14 +422,14 @@ class Gallery(InlineUnit):
                 inline_message_id=call.inline_message_id,
                 reply_markup=self._gallery_markup(unit_id),
             )
-            await call.answer("✅ Slideshow on")
+            await call.answer("✅ Slayd-shou yoqilgan")
         else:
             del self._units[unit_id]["slideshow"]
             await self.bot.edit_message_reply_markup(
                 inline_message_id=call.inline_message_id,
                 reply_markup=self._gallery_markup(unit_id),
             )
-            await call.answer("🚫 Slideshow off")
+            await call.answer("🚫 Slayd-shou o'chirilgan")
             return
 
         asyncio.ensure_future(
