@@ -905,8 +905,8 @@ class LoaderMod(loader.Module):
             " Muvaffaqiyatlsiz. Jurnallarga qarang.</b>"
         ),
         "loaded": (
-            "<emoji document_id=5188377234380954537>🔆</emoji><b> moduli"
-            " </b><code>{}</code>{}<b> yuklangan {}</b>{}{}{}{}{}{}"
+            "<emoji document_id=5188377234380954537>🔆</emoji><b> Ushbu"
+            " </b><code>{}</code>{}<b> moduli yuklangan {}</b>{}{}{}{}{}{}"
         ),
         "no_class": "<b>Unda nimani yuklash kerak?</b>",
         "unloaded": (
@@ -932,7 +932,7 @@ class LoaderMod(loader.Module):
             " bog'liqliklar:\n\n{}</b>"
         ),
         "requirements_restart": (
-            "<emoji document_id=5445284980978621387>🚀</emoji><b> Bog'liqlar o'rnatildi,"
+            "<emoji document_id=5445284980978621387>🚀</emoji><b> Bog'liqliklar o'rnatildi,"
             " lekin qo'llash uchun qayta ishga tushirish kerak </b><code>{}</code>"
         ),
         "all_modules_deleted": (
