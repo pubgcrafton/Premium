@@ -186,14 +186,14 @@ class PremiumInfoMod(loader.Module):
         "owner": "Egasi",
         "version": "Versiya",
         "build": "Build",
-        "prefix": "Prefix",
+        "prefix": "Prefiks",
         "uptime": "Ishlash vaqti",
         "branch": "Filial",
         "send_info": "Bot haqida ma'lumot",
         "description": "ℹ Bu shaxsiy ma'lumot emas",
         "_ihandle_doc_info": "Bot haqida ma'lumot",
         "up-to-date": (
-            "<emoji document_id=5370699111492229743>😌</emoji><b> Eng so'ngi versia</b>"
+            "<emoji document_id=5370699111492229743>😌</emoji><b> Eng so'ngi versiya</b>"
         ),
         "update_required": (
             "<emoji document_id=5424728541650494040>😕</emoji><b> Yangilash"
@@ -219,9 +219,9 @@ class PremiumInfoMod(loader.Module):
         "desc": (
             "<emoji document_id=6318565919471699564>🌌</emoji> <b>Premium Userbot</b>\n\nKo'p"
             " funksiyali userbot, buning ichida: ichki-gallereya, formalar, ro'yhatlar,"
-            " hamda animatsiyalangan emojilar. Userbot - bu sizning"
-            " telegram-akkauntingiz ichida ishlaydigan ilova. Hohlagan chatga komanda"
-            " yozsangiz, tez orada bu komanda ishlaydi. <a"
+            " hamda animatsiyalangan emojilar bor. Userbot - bu sizning"
+            " telegram-akkauntingiz ichida ishlaydigan ilova. Hohlagan chatga buyruq"
+            " yozsangiz, tez orada bu buyruq ishlaydi. <a"
             ' href="https://github.com/pubgcrafton/Premium">GitHub</a> da misollarni'
             " ko'rishingiz mumkin"
         ),
@@ -431,7 +431,7 @@ class PremiumInfoMod(loader.Module):
             ),
             loader.ConfigValue(
                 "custom_button",
-                ["🔰 Qo'llab-quvvatlash chati", "https://t.me/shaxsiy_guruh_007"],
+                ["🔰 Qo'llab-quvvatlash", "https://t.me/shaxsiy_guruh_007"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Union(
                     loader.validators.Series(fixed_len=2),
