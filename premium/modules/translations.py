@@ -231,9 +231,9 @@ class Translations(loader.Module):
             "<emoji document_id=5433653135799228968>📁</emoji> <b>Bajarilgan buyruq"
             " natijasi juda uzun, shuning uchun u fayl sifatida yuborildi.</b>"
         ),
-        "opening_form": " <b>Kuting...</b>",
-        "opening_gallery": " <b>Galeriyani ochish...</b>",
-        "opening_list": " <b>Ro'yxatni ochish...</b>",
+        "opening_form": " <b>Forma ochilmoqda...</b>",
+        "opening_gallery": " <b>Galeriya ochilmoqda...</b>",
+        "opening_list": " <b>Ro'yxat ochilmoqda...</b>",
         "inline403": (
             "🚫 <b>Siz bu guruhda inline buyruqlarni yuborishingiz mumkin emas</b>"
         ),
