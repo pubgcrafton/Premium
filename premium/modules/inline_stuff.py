@@ -350,7 +350,7 @@ class InlineStuffMod(loader.Module):
             return
 
         await message.answer_photo(
-            "https://siasky.net/BAAijQxlOyLjMReeTB5XKD9zsoqajPRkKk_xVaV0bfOHcg",
+            "https://raw.githubusercontent.com/pubgcrafton/assets/main/premium_banner.png",
             caption=self.strings("this_is_premium"),
         )
 
