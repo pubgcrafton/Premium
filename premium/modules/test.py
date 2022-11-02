@@ -1038,7 +1038,7 @@ class TestMod(loader.Module):
             "🔰 Sizning Premium Userbot jurnallaringiz ushbu chatda paydo bo'ladi",
             silent=True,
             invite_bot=True,
-            avatar="https://siasky.net/KAA8N5kzvFo_x6lPtdPIGj_2crah6mlwia7S-EsVuPEGzg",
+            avatar="https://raw.githubusercontent.com/pubgcrafton/assets/main/premium-logs.png",
         )
 
         self._logchat = int(f"-100{chat.id}")
