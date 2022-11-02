@@ -122,7 +122,7 @@ class PremiumBackupMod(loader.Module):
 
     strings_uz = {
         "period": (
-            "⌚️ <b>Unit «ALFA»</b> avtomatik ravishda e'lon qiladi. Ushbu sozlamalarni"
+            "⌚️ <b>«ALFA» BIRLIGI</b> avtomatik ravishda e'lon qiladi. Ushbu sozlamalarni"
             " keyinroq o'zgartirishingiz mumkin.\n\nIltimos, avtomatik e'lon qilish"
             " davom ettirish tartibini tanlang"
         ),
@@ -202,7 +202,7 @@ class PremiumBackupMod(loader.Module):
         if not self.get("period"):
             await self.inline.bot.send_photo(
                 self.tg_id,
-                photo="https://siasky.net/LADIoU-z6hMtlcr7dYFLjn6hii2o_9lCqH5e_PChscRRbw",
+                photo="https://raw.githubusercontent.com/pubgcrafton/assets/main/premium_unit_alpha.png",
                 caption=self.strings("period"),
                 reply_markup=self.inline.generate_markup(
                     utils.chunks(
@@ -234,7 +234,7 @@ class PremiumBackupMod(loader.Module):
             "📼 Ma'lumotlar bazasining zaxira nusxalari shu yerda paydo bo'ladi",
             silent=True,
             archive=True,
-            avatar="https://github.com/pubgcrafton/assets/raw/master/shaxsiy-backups.png",
+            avatar="https://raw.githubusercontent.com/pubgcrafton/assets/main/premium-backups.png",
             _folder="premium",
         )
 
