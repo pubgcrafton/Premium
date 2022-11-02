@@ -119,11 +119,11 @@ class PremiumException:
 
         return PremiumException(
             message=(
-                f"<b>🚫 Xato!</b>\n{cause_mod}\n<b>🗄 Where:</b>"
+                f"<b>🚫 Xato!</b>\n{cause_mod}\n<b>🗄 Qayerida:</b>"
                 f" <code>{utils.escape_html(filename)}:{lineno}</code><b>"
                 f" in </b><code>{utils.escape_html(name)}</code>\n😵"
                 f" <code>{utils.escape_html(line)}</code>"
-                " 👈\n<b>❓ What:</b>"
+                " 👈\n<b>❓ Nima uchun:</b>"
                 f" <code>{utils.escape_html(''.join(traceback.format_exception_only(exc_type, exc_value)).strip())}</code>"
             ),
             local_vars=(
