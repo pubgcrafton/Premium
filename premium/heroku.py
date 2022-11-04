@@ -96,7 +96,7 @@ def get_app(
         raise RuntimeError("Could not identify app!")
 
     app = heroku.create_app(
-        name=f"hikka-{utils.rand(8)}",
+        name=f"premium-{utils.rand(8)}",
         stack_id_or_name="heroku-20",
         region_id_or_name="eu",
     )
