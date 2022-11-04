@@ -39,7 +39,7 @@ class PrivatmtMod(loader.Module):
 
     strings = {
         "name": "PremiumMa'lumot",
-        "owner": "Ega",
+        "owner": "Egasi",
         "version": "Versiya",
         "build": "Versiya kodi",
         "prefix": "Prefiks",
@@ -152,7 +152,7 @@ class PrivatmtMod(loader.Module):
                 f"<b>{upd}</b>\n"
                 f"<b>⏳ Ishlash vaqti: {uptime}</b>\n\n"
                 f"<b>⌚ Soat: {time}</b>\n"
-                f"<b>🎷 {self.strings('prefix')}: </b>{prefix}\n"
+                f"<b>⌨️ {self.strings('prefix')}: </b>{prefix}\n"
                 f"<b>📻 Platforma: «{platform}»</b>\n"
                 f"<b>🎗 Bu userbot Doniyor Norqulovga tegishli bo'lib ommaviy sanalmaydi!</b>\n"
             )
