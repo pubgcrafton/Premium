@@ -325,11 +325,11 @@ class UpdaterMod(loader.Module):
 
     strings_uz = {
         "restarting": (
-            "<emoji document_id=5469986291380657759>🕗</emoji> <b>{}"
+            "<emoji document_id=5469986291380657759>🔄</emoji> <b>{}"
             " qayta ishga tushirilmoqda...</b>"
         ),
         "restarting_caption": (
-            "<emoji document_id=5469986291380657759>🕗</emoji> <b>{}"
+            "<emoji document_id=5469986291380657759>🔄</emoji> <b>{}"
             " qayta ishga tushirilmoqda...</b>"
         ),
         "downloading": (
@@ -341,8 +341,8 @@ class UpdaterMod(loader.Module):
             " o'rnatilmoqda...</b>"
         ),
         "success": (
-            "<emoji document_id=5469986291380657759>⏱</emoji> <b>Qayta ishga tushirish"
-            " muvaffaqiyatli yakunlandi! {}</b>\n<i>Modullar"
+            "<emoji document_id=5469986291380657759>🪂</emoji> <b>Qayta ishga tushirish"
+            " muvaffaqiyatli yakunlandi! {}</b>\n<i>🚥 Ammo modullar hali ham"
             " yuklanmoqda...</i>\n<i>Qayta ishga tushirish {} soniya davom etdi</i>"
         ),
         "full_success": (
@@ -367,7 +367,7 @@ class UpdaterMod(loader.Module):
             ' href="https://github.com/pubgcrafton/Premium/commit/{}">{}</a></b>'
         ),
         "no_update": (
-            "🚸 <b>Siz allaqachon eng so'nggi versiyadasiz. Yangilamoqchimisiz?</b>"
+            "🚸 <b>Siz allaqachon eng so'nggi versiyadasiz. Ammo yana yangilamoqchimisiz?</b>"
         ),
         "cancel": "🚫 Bekor qilish",
         "_cls_doc": "Foydalanuvchi botini yangilaydi",

@@ -1679,6 +1679,7 @@ class LoaderMod(loader.Module):
                     "https://github.com/hikariatama/host/raw/master",
                     "https://github.com/MoriSummerz/ftg-mods/raw/main",
                     "https://gitlab.com/CakesTwix/friendly-userbot-modules/-/raw/master",
+                    "https://github.com/AmoreForever/amoremods/raw/master",
                 ],
                 lambda: self.strings("add_repo_config_doc"),
                 validator=loader.validators.Series(validator=loader.validators.Link()),
