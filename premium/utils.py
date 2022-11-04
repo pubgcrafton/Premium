@@ -856,6 +856,9 @@ def get_named_platform() -> str:
 
     if "GOORM" in os.environ:
         return "🦾 GoormIDE"
+        
+        if "DYNO" in os.environ:
+        return "♓️ Heroku"
 
     if "RAILWAY" in os.environ:
         return "🚂 Railway"
@@ -906,6 +909,9 @@ def get_platform_emoji(client: typing.Optional[CustomTelegramClient] = None) -> 
     if "CODESPACES" in os.environ:
         return BASE.format(5194976881127989720)
 
+    if "DYNO" in os.environ:
+        return BASE.format(5192845434887873156)
+        
     if "com.termux" in os.environ.get("PREFIX", ""):
         return BASE.format(5193051778001673828)
 
