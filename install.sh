@@ -49,6 +49,25 @@ if [ ! x"$SUDO_USER" = x"" ]; then
 	chown "$SUDO_USER:" premium-install.log
 fi
 
+if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
+	# We are running in a heroku dyno without python, time to get ugly!
+	runout git clone https://github.com/heroku/heroku-buildpack-python || {
+		printf "Bootstrap download failed!"
+		exit 1
+	}
+	rm -rf .heroku .cache .profile.d requirements.txt runtime.txt .env
+	mkdir .cache .env
+	echo "python-3.9.6" >runtime.txt
+	echo "pip" >requirements.txt
+	STACK=heroku-18 runout bash heroku-buildpack-python/bin/compile /app /app/.cache /app/.env ||
+		{
+			printf "Bootstrap install failed!"
+			exit 1
+		}
+	rm -rf .cache
+	export PATH="/app/.heroku/python/bin:$PATH" # Prefer the bootstrapped python, incl. pip, over the system one.
+fi
+
 if [ -d "Premium/premium" ]; then
 	cd Premium || {
 		printf "\rError: Install git package and re-run installer"
@@ -56,8 +75,8 @@ if [ -d "Premium/premium" ]; then
 	}
 	DIR_CHANGED="yes"
 fi
-if [ -f ".setup_complete" ]; then
-	# If premium is already installed by this script
+if [ -f ".setup_complete" ] || [ -d "premium" -a ! x"" = x"$DYNO" ]; then
+	# If premium is already installed by this script, or its in Heroku and installed
 	PYVER=""
 	if echo "$OSTYPE" | grep -qE '^linux-gnu.*'; then
 		PYVER="3"
