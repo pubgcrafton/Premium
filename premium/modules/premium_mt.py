@@ -9,7 +9,7 @@
 #
 #                                 © Copyright 2022
 #
-# https://t.me/DONIYOR_TM | https://t.me/hikariatama
+# https://t.me/DONIYOR_TM | https://t.me/DONIYOR_TM 
 #
 # 🔒 Licensed under the GNU GPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
@@ -34,20 +34,20 @@ logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class PrivatinfoMod(loader.Module):
-    """Show userbot info"""
+class PrivatmtMod(loader.Module):
+    """Userbot ma'lumotlarini ko'rsatish"""
 
     strings = {
-        "name": "PremiumInfo_2",
+        "name": "PremiumMa'lumot",
         "owner": "Ega",
         "version": "Versiya",
         "build": "Versiya kodi",
         "prefix": "Prefiks",
         "uptime": "Ishlash vaqti",
         "branch": "Filial",
-        "up-to-date": "🎡 Yangi va oxirgi versiya",
+        "up-to-date": "🎡 Eng oxirgi versiya",
         "update_required": "😕 Yangilanish shart</b><code>.update</code><b>",
-        "_cfg_cst_msg": "Ma'lumot uchun maxsus xabar. Mayda bo'lishi mumkin {me}, {version}, {build}, {prefix}, {platform}, {upd}, {time}, {uptime}, {branch} kalit so'zlar",
+        "_cfg_cst_msg": "Ma'lumot uchun maxsus xabar. Mana shular {me}, {version}, {build}, {prefix}, {platform}, {upd}, {time}, {uptime}, {branch} kalit so'zlar",
         "_cfg_cst_btn": "Ma'lumot uchun maxsus tugma. Tugmani olib tashlash uchun bo'sh qoldiring",
         "_cfg_cst_bnr": "Ma'lumot uchun maxsus banner.",
         "_cfg_cst_frmt": "Banner ma'lumotlari uchun maxsus fayl formati.",
@@ -109,7 +109,7 @@ class PrivatinfoMod(loader.Module):
         self._client = client
         self._me = await client.get_me()
 
-    def _render_info(self) -> str:
+    def _render_mt(self) -> str:
         ver = utils.get_git_hash() or "Unknown"
 
         try:
@@ -206,8 +206,8 @@ class PrivatinfoMod(loader.Module):
             )
 
     @loader.unrestricted
-    async def infocmd(self, message: Message):
-        """Send userbot info"""
+    async def mtcmd(self, message: Message):
+        """Userbot ma'lumotlarini yuborish"""
         m1 = self._get_mark(1)
         m2 = self._get_mark(2)
         m3 = self._get_mark(3)
@@ -216,7 +216,7 @@ class PrivatinfoMod(loader.Module):
 
         await self.inline.form(
             message=message,
-            text=self._render_info(),
+            text=self._render_mt(),
             reply_markup=[
                 [
                     *([m1] if m1 else []),
