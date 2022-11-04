@@ -857,7 +857,7 @@ def get_named_platform() -> str:
     if "GOORM" in os.environ:
         return "🦾 GoormIDE"
         
-        if "DYNO" in os.environ:
+    if "DYNO" in os.environ:
         return "♓️ Heroku"
 
     if "RAILWAY" in os.environ:
