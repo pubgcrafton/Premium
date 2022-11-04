@@ -220,5 +220,5 @@ class Web(root.Web):
     async def favicon(_):
         return web.Response(
             status=301,
-            headers={"Location": "https://siasky.net/jADBfWhaphoeaP5yFFNoYQ6NGqxfFXwZMfRWAjgJabEkug"},
+            headers={"Location": "https://raw.githubusercontent.com/pubgcrafton/assets/main/premium_ultimate_userbot.png"},
         )
