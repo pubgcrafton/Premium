@@ -81,7 +81,7 @@ class HerokuMod(loader.Module):
 
         await utils.dnd(self._client, self._bot, True)
 
-        self._heroku_url = heroku.get_app(api_token=main.hikka.api_token)[0].web_url
+        self._heroku_url = heroku.get_app(api_token=main.premium.api_token)[0].web_url
         self._heroku_pinger.start()
 
     @loader.command(ru_doc="<ссылка Redis> - Установить базу данных Redis")
