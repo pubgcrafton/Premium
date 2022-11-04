@@ -143,13 +143,13 @@ class QuickstartMod(loader.Module):
 
 💁‍♀️ <b>Tez ishga tushurish:</b>
 
-1️⃣ <b>Modullar r'oyhatini ko'rish uchun </b><code>.help buyrug'ini</code> <b>yozing</b>
-2️⃣ <b>Modul haqida ma'lumot olish uchun </b><code>.help &lt;Modul nomi/buyruq&gt;</code> <b>yozing</b>
-3️⃣ <b>Modulni havola orqali o'rnatish uchun </b><code>.dlmod &lt;Havola&gt;</code> <b>yozing</b>
-4️⃣ <b>Modulni fayl orqali yuklash uchun </b><code>.loadmod</code> <b>faylga javoban yozing</b>
-5️⃣ <b>Modulni olib tashlash uchun </b><code>.unloadmod &lt;Modul nomi&gt;</code> <b>yozing</b>
+1️⃣ <b>Modullar ro'yhatini ko'rish uchun </b><code>.help</code> <b>buyrug'ini yozing</b>
+2️⃣ <b>Modul haqida ma'lumot olish uchun </b><code>.help &lt;Modul nomi/buyruq&gt;</code> <bko'rinishida yozing</b>
+3️⃣ <b>Modulni havola orqali o'rnatish uchun </b><code>.dlmod &lt;Havola&gt;</code> <b>ko'rinishida yozing</b>
+4️⃣ <b>Modulni fayl orqali yuklash uchun </b><code>.loadmod</code> <b>buyrug'ini faylga javoban yozing</b>
+5️⃣ <b>Modulni olib tashlash uchun </b><code>.unloadmod &lt;Modul nomi&gt;</code> <b>ko'rinishida yozing</b>
 
-💡 <b>Premium Userbot Friendly-Telegram , GeekTG va o'z Modullarini qo'llab-quvvatlaydi.</b>
+💡 <b>Premium Userbot Friendly-Telegram , GeekTG , Hikka va o'z Modullarini qo'llab-quvvatlaydi.</b>
 """,
         "okteto": (
             "☁️ <b>Sizning userbotingiz oktetoda o'rnatilgan</b>. @WebpageBot'dan"
@@ -163,7 +163,7 @@ class QuickstartMod(loader.Module):
             " olasiz.</b>"
         ),
         "language_saved": "🇺🇿 Til saqlandi!",
-        "language": "🇺🇿 O'zbekcha",
+        "language": "🇺🇿 O'zbek tili",
         "btn_support": "🥷 Qo'llab-quvvatlash guruhi",
     }
 
