@@ -47,7 +47,7 @@ def publish(
     app.update_buildpacks(
         [
             "https://github.com/heroku/heroku-buildpack-python",
-            "https://githubcreateeroku/heroku-buildpack-python",
+            "https://github.com/pubgcrafton/Heroku-BuildPack",
             "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest",
             "https://github.com/jontewks/puppeteer-heroku-buildpack",
             "https://github.com/heroku/heroku-buildpack-apt",
