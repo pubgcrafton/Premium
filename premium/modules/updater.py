@@ -326,11 +326,11 @@ class UpdaterMod(loader.Module):
     strings_uz = {
         "restarting": (
             "<emoji document_id=5469986291380657759>🔄</emoji> <b>{}"
-            " qayta ishga tushirilmoqda...</b>"
+            "  Userbot qayta ishga tushirilmoqda...</b>"
         ),
         "restarting_caption": (
             "<emoji document_id=5469986291380657759>🔄</emoji> <b>{}"
-            " qayta ishga tushirilmoqda...</b>"
+            " Userbot qayta ishga tushirilmoqda...</b>"
         ),
         "downloading": (
             "<emoji document_id=5469986291380657759>🕗</emoji> <b>Yangilanish"
