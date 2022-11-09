@@ -227,7 +227,7 @@ class HelpMod(loader.Module):
         "undoc_cmd": "🦥 Hujjatlar yo'q",
         "all_header": (
             "<emoji document_id=5188377234380954537>🏕️</emoji> <b>{} ta umumiy modullar,"
-            " ta yashirin {}:</b>"
+            " {} ta yashirin</b>"
         ),
         "mod_tmpl": "\n{} <code>{}</code>",
         "first_cmd_tmpl": ": ( {}",
