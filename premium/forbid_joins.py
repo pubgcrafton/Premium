@@ -59,7 +59,7 @@ def install_join_forbidder(client: TelegramClient) -> TelegramClient:
                         "APIRatelimiterMod",
                         "ForbidJoinMod",
                         "LoaderMod",
-                        "ShaxsiySettingsMod",
+                        "PremiumSettingsMod",
                     }
                     # APIRatelimiterMod is a core proxy, so it wraps around every module in Premium, if installed
                     # ForbidJoinMod is also a Core proxy, so it wraps around every module in Premium, if installed
