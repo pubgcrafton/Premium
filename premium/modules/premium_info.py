@@ -510,7 +510,7 @@ class PremiumInfoMod(loader.Module):
                         utils.get_platform_emoji()
                         if self._client.premium_me.premium and not inline
                         else "💢 Premium Userbot",
-                        "<emoji document_id=5373141891321699086>😎</emoji>",
+                        "<emoji document_id=5373141891321699086>🧑‍💻</emoji>",
                         "<emoji document_id=5469741319330996757>💫</emoji>",
                         "<emoji document_id=5449918202718985124>🌳</emoji>",
                         "<emoji document_id=5472111548572900003>⌨️</emoji>",
