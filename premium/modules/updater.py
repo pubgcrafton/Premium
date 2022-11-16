@@ -326,11 +326,11 @@ class UpdaterMod(loader.Module):
     strings_uz = {
         "restarting": (
             "<emoji document_id=5469986291380657759>🕗</emoji> <b>{}"
-            " qayta ishga tushirilmoqda...</b>"
+            " Userbot qayta ishga tushirilmoqda...</b>"
         ),
         "restarting_caption": (
-            "<emoji document_id=5469986291380657759>🕗</emoji> <b>{}"
-            " qayta ishga tushirilmoqda...</b>"
+            "<emoji document_id=5469986291380657759>🔄</emoji> <b>{}"
+            " Userbot qayta ishga tushirilmoqda...</b>"
         ),
         "downloading": (
             "<emoji document_id=5469986291380657759>🕗</emoji> <b>Yangilanish"
@@ -341,13 +341,13 @@ class UpdaterMod(loader.Module):
             " o'rnatilmoqda...</b>"
         ),
         "success": (
-            "<emoji document_id=5469986291380657759>⏱</emoji> <b>Qayta ishga tushirish"
-            " muvaffaqiyatli yakunlandi! {}</b>\n<i>Modullar"
-            " yuklanmoqda...</i>\n<i>Qayta ishga tushirish {} soniya davom etdi</i>"
+            "<emoji document_id=5469986291380657759>🪂</emoji> <b>Qayta ishga tushirish"
+            " muvaffaqiyatli yakunlandi! {}</b>\n<i>🚥 Ammo modullar hali ham"
+            " yuklanmoqda...</i>\n<i>⏳ Qayta ishga tushirish {} soniya davom etdi</i>"
         ),
         "full_success": (
             "<emoji document_id=5469986291380657759>👍</emoji> <b>Sizning botingiz"
-            " to'liq yuklandi! {}</b>\n<i>Jami qayta ishga tushirish {} soniya davom"
+            " to'liq yuklandi! {}</b>\n<i>⏳ Qayta ishga tushirish {} soniya davom"
             " etdi</i>"
         ),
         "secure_boot_complete": (
@@ -355,7 +355,7 @@ class UpdaterMod(loader.Module):
             " tushirish {} soniya davom etdi</i>"
         ),
         "origin_cfg_doc": "dan yangilanish yuklanadi",
-        "btn_restart": "🔄 Qayta ishga tushirish",
+        "btn_restart": "🔄 Qayta yuklash",
         "btn_update": "🧭 Yangilash",
         "restart_confirm": "❓ <b>Haqiqatan ham qayta ishga tushirmoqchimisiz?</b>",
         "secure_boot_confirm": (
@@ -367,17 +367,17 @@ class UpdaterMod(loader.Module):
             ' href="https://github.com/pubgcrafton/Premium/commit/{}">{}</a></b>'
         ),
         "no_update": (
-            "🚸 <b>Siz allaqachon eng so'nggi versiyadasiz. Yangilamoqchimisiz?</b>"
+            "🚸 <b>Siz allaqachon eng so'nggi versiyadasiz. Yana qayta yangilamoqchimisiz?</b>"
         ),
         "cancel": "🚫 Bekor qilish",
         "_cls_doc": "Foydalanuvchi botini yangilaydi",
         "lavhost_restart": (
             "<emoji document_id=5469986291380657759>✌️</emoji> <b>{}"
-            " qayta ishga tushirilmoqda...</b>"
+            " Userbot qayta ishga tushirilmoqda...</b>"
         ),
         "lavhost_update": (
             "<emoji document_id=5469986291380657759>✌️</emoji> <b>{}"
-            " yangilanmoqda...</b>"
+            " Userbot yangilanmoqda...</b>"
         ),
     }
 
