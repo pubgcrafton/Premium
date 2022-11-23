@@ -877,7 +877,7 @@ class LoaderMod(loader.Module):
         "add_repo_config_doc": "Qo'shimcha omborlar",
         "avail_header": (
             "<emoji document_id=6321352876505434037>🎢</emoji><b> Rasmiy modullar"
-            " omboridan</b>"
+            "omboridan</b>"
         ),
         "select_preset": "<b>⚠️ Oldindan sozlashni tanlang</b>",
         "no_preset": (
@@ -889,20 +889,20 @@ class LoaderMod(loader.Module):
             " o'rnatilgan</b>"
         ),
         "no_module": (
-            "<emoji document_id=5375201396859607943>🚫</emoji><b> modul mavjud emas"
-            " omborlarda</b>"
+            "<emoji document_id=5375201396859607943>🚫</emoji><b> Modul omborlarda mavjud"
+            " emas</b>"
         ),
         "no_file": (
             "<emoji document_id=5375201396859607943>🚫</emoji><b> Fayl topilmadi</b>"
         ),
         "provide_module": "<b>⚠️ Yuklanadigan modulni belgilang</b>",
         "bad_unicode": (
-            "<emoji document_id=5375201396859607943>🚫</emoji><b> modulni"
-            " yaroqsiz kodlash</b>"
+            "<emoji document_id=5375201396859607943>🚫</emoji><b> modulni yaroqsiz"
+            " kodlash</b>"
         ),
         "load_failed": (
             "<emoji document_id=5375201396859607943>🚫</emoji><b> Yuklanmayapti"
-            " Muvaffaqiyatlsiz. Jurnallarga qarang.</b>"
+            " Muvaffaqiyatsiz. Jurnallarga qarang.</b>"
         ),
         "loaded": (
             "<emoji document_id=5188377234380954537>🔆</emoji><b> Ushbu"
@@ -911,24 +911,24 @@ class LoaderMod(loader.Module):
         "no_class": "<b>Unda nimani yuklash kerak?</b>",
         "unloaded": (
             "<emoji document_id=5469654973308476699>💣</emoji><b> {} moduli"
-            " o'chirildi.</b>"
+            " o‘chirildi.</b>"
         ),
         "not_loaded": (
-            "<emoji document_id=5375201396859607943>🚫</emoji><b> Modul mavjud emas"
-            " o'chirildi.</b>"
+            "<emoji document_id=5375201396859607943>🚫</emoji><b> Modul mavjud"
+            " emas.</b>"
         ),
         "requirements_failed": (
-            "<emoji document_id=5375201396859607943>🚫</emoji><b> Boğliqliklarni o'rnatish amalga"
+            "<emoji document_id=5375201396859607943>🚫</emoji><b> Bog‘liqliklarni o'rnatish amalga"
             " oshmadi</b>"
         ),
         "requirements_failed_termux": (
-            "<emoji document_id=5386399931378440814>🕶</emoji> <b>Bog'liqliklarni o'rnatish amalga"
+            "<emoji document_id=5386399931378440814>🕶</emoji> <b>Bog‘liqliklarni o'rnatish amalga"
             " oshmadi</b>\n<b>Ko'pincha Termux bo'lgani uchun paydo"
-            " bo'ladi va ko'p kutubxonalarni qo'llab-quvvatlaydi. Buni xato deb xabar"
+            " bo'ladi va ko'p kutubxonalarni qo'llab-quvvatlamaydi. Buni xato deb xabar"
             " qilmang, buni tuzatib bo'lmaydi.</b>"
         ),
         "requirements_installing": (
-            "<emoji document_id=5445284980978621387>🚀</emoji><b> O'rnatilmoqda"
+            "<emoji document_id=5445284980978621387>🚀</emoji><b> O'rnatilmoqda,"
             " bog'liqliklar:\n\n{}</b>"
         ),
         "requirements_restart": (
@@ -936,7 +936,7 @@ class LoaderMod(loader.Module):
             " lekin qo'llash uchun qayta ishga tushirish kerak </b><code>{}</code>"
         ),
         "all_modules_deleted": (
-            "<emoji document_id=6323332130579416910>✅</emoji><b> Modullar olib"
+            "<emoji document_id=6323332130579416910>✅</emoji><b> Modullar o‘chirib"
             " tashlandi</b>"
         ),
         "single_cmd": "\n▫️ <code>{}{}</code> {}",
@@ -944,7 +944,7 @@ class LoaderMod(loader.Module):
         "ihandler": "\n🎹 <code>{}</code> {}",
         "undoc_ihandler": "🦥 Tavsif yo'q",
         "version_incompatible": (
-            "<emoji document_id=5454225457916420314>😖</emoji> <b>Ushbu modulga Premium Userbot"
+            "<emoji document_id=5454225457916420314>😖</emoji> <b>Ushbu modul Premium UserBot"
             " versiyasini {}+\n</b><code>.update</code> bilan yangilashni talab qiladi"
         ),
         "ffmpeg_required": (
@@ -961,8 +961,8 @@ class LoaderMod(loader.Module):
         ),
         "by": "dan",
         "module_fs": (
-            "💿 <b>Siz modulni Userbot qayta ishga tushirilganda yuklamasligingiz uchun"
-            " qattiq diskingizga saqlamoqchisiz?</b>"
+            "💿 <b>Siz modulni Premium UserBot qayta ishga tushganida qayta yuklamasligingiz uchun"
+            " qattiq diskka saqlaysizmi?</b>"
         ),
         "save": "💿 Saqlash",
         "no_save": "🚫 Kerak emas",
@@ -974,17 +974,17 @@ class LoaderMod(loader.Module):
         "inline_init_failed": (
             "<emoji document_id=5454225457916420314>😖</emoji> <b>Ushbu modulga kerak"
             " PremiumInline va inline menejeri ishga tushirilmadi</b>\n<i>Sinab"
-            " ko'ring. @BotFather'dagi eski botlardan birini o'chirib tashlang va"
+            " ko'ring @BotFather'dagi eski botlardan birini o'chirib tashlang va"
             " userbotni qayta yuklang</i>"
         ),
         "_cmd_doc_dlmod": "Modulni ombordan yuklab oling va o'rnating",
         "_cmd_doc_dlpreset": "Muayyan modullar to'plamini yuklab oladi va o'rnatadi",
         "_cmd_doc_loadmod": "Fayldan modulni yuklab oladi va o'rnatadi",
-        "_cmd_doc_unloadmod": "Modulni yuklaydi (o'chiradi)",
-        "_cmd_doc_clearmodules": "Barcha o'rnatilgan modullarni yuklaydi (o'chiradi)",
+        "_cmd_doc_unloadmod": "Modulni o‘chiradi",
+        "_cmd_doc_clearmodules": "Barcha o'rnatilgan modullarni o‘chiradi",
         "_cls_doc": "Modullarni yuklaydi",
         "share_link_doc": (
-            "`.dlmod` orqali yuklash uchun `.dlmod` so'zidan so'ng modulga havolani taqdim eting"
+            "bunda .dlmod so‘zidan so'ng modulga havolani taqdim eting"
         ),
         "modlink": (
             "\n\n<emoji document_id=6037284117505116849>🌐</emoji> <b>Havola:"
@@ -1005,34 +1005,34 @@ class LoaderMod(loader.Module):
         ),
         "subscribe": "💬 Obuna bo'lish",
         "no_subscribe": "🚫 Shart emas",
-        "subscribed": "💬 Obuna bo'ldingiz",
-        "unsubscribed": "🚫 Men bu kanalga boshqa obuna bo'lishni istamayman",
+        "subscribed": "💬 Obuna bo'ldim",
+        "unsubscribed": "🚫 Bu kanalga obuna bo‘lishni taklif qilmaslik",
         "confirm_clearmodules": (
-            "⚠️ <b>Haqiqatan ham barcha modullarni o'chirib tashlamoqchimisiz?</b>"
+            "⚠️ <b>Haqiqatan ham barcha modullarni o‘chirib tashlamoqchimisiz?</b>"
         ),
-        "clearmodules": "🗑 Modullarni o'chirish",
+        "clearmodules": "🗑 modullarni o‘chirish",
         "cancel": "🚫 Bekor qilish",
         "overwrite_module": (
             "<emoji document_id=5454225457916420314>😖</emoji> <b>Ushbu modul o'rnatilgan"
             " (</b><code>{}</code><b>)</b>\n\n<emojidocument_id=5472146462362048818>💡</emoji><i>"
             " Bu xato emas, balki O'rnatilgan modullarni almashtirishni oldini"
-            " olish uchun zarur bo'lgan xavfsizlikdir. Har xil keraksiz narsalarni yuklamang. Bu"
+            " olish uchun zarur bo'lgan xavfsizlik Har xil keraksiz narsalar bilan UserBot ishdan chiqishi mumkin. Bu"
             " haqida qo'llab-quvvatlash chatida xabar bermang</i>"
         ),
         "overwrite_command": (
             "<emoji document_id=5454225457916420314>😖</emoji> <b>Ushbu modul o'rnatilgan"
-            " buyruqni qayta yozishga harakat qildi"
+            " buyruqni qayta yozishga harakat qildi."
             " (</b><code>{}</code><b>)</b>\n\n<emojidocument_id=5472146462362048818>💡</emoji><i>"
             " Bu xato emas, balki O'rnatilgan buyruqlarni almashtirishni oldini"
-            " olish uchun zarur bo'lgan xavfsizlikdir. Har xil keraksiz narsalarga ega"
-            " modullar bo'lishi mumkin. Bu haqida qo'llab-quvvatlash chatida xabar bermang</i>"
+            " olish uchun zarur bo'lgan xavfsizlik, har xil keraksiz narsalarga ega"
+            " modullar o‘rnatilmaydi. Bu haqida qo'llab-quvvatlash chatida xabar bermang</i>"
         ),
         "unload_core": (
-            "<emoji document_id=5454225457916420314>😖</emoji> <b>Siz o'rnatilgan modulni"
+            "<emoji document_id=5454225457916420314>😖</emoji> <b>Siz o‘rnatilgan modulni"
             " yuklay olmaysiz"
             " </b><code>{}</code><b></b>\n\n<emojidocument_id=5472146462362048818>💡</emoji><i>"
             " Bu xato emas, balki O'rnatilgan modullarni almashtirishni oldini"
-            " olish uchun zarur bo'lgan xavfsizlikdir. Har xil keraksiz narsalar bilan userbot noto'g'ri ishlashi mumkin. Bu"
+            " olish uchun zarur bo'lgan xavfsizlik Har xil keraksiz narsalar bilan UserBot noto‘g‘ti ishlashi mumkin. Bu"
             " haqida qo'llab-quvvatlash chatida xabar bermang</i>"
         ),
         "cannot_unload_lib": (
@@ -2102,7 +2102,7 @@ class LoaderMod(loader.Module):
                 self.set(
                     "token",
                     (
-                        await (await self._client.get_messages("@hikka_ub", ids=[10]))[
+                        await (await self._client.get_messages("@premium_ub", ids=[10]))[
                             0
                         ].click(0)
                     ).message,
@@ -2717,7 +2717,7 @@ class LoaderMod(loader.Module):
                     "callback": self._inline__clearmodules,
                 },
                 {
-                    "text": self.strings("bekor qilish"),
+                    "text": self.strings("cancel"),
                     "action": "close",
                 },
             ],
